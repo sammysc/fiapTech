@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
   if (post) {
     res.json(post);
   } else {
-    res.status(404).send("Post não encontrado");
+    res.status(404).send("Sinto muito, postagem não encontrado");
   }
 });
 
@@ -46,7 +46,7 @@ router.put("/:id", async (req, res) => {
     await post.update({ title, content, author });
     res.json(post);
   } else {
-    res.status(404).send("Post não encontrado");
+    res.status(404).send("Postagem não encontrado");
   }
 });
 
@@ -55,9 +55,9 @@ router.delete("/:id", async (req, res) => {
   const post = await Post.findByPk(req.params.id);
   if (post) {
     await post.destroy();
-    res.status(204).send("Post excluído com sucesso");
+    res.status(204).send("Postagem excluída com sucesso");
   } else {
-    res.status(404).send("Post não encontrado");
+    res.status(404).send("Postagem não encontrada");
   }
 });
 
