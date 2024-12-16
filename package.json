@@ -18,7 +18,9 @@
     "plataforma-educacional": "file:",
     "sequelize": "^6.37.5",
     "sequelize-cli": "^6.6.2",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
